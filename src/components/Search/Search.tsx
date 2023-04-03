@@ -13,8 +13,9 @@ import IconNewWindow from '../../assets/images/icon-new-window.svg'
 interface Props { }
 
 const Search: React.FC<Props> = () => {
-  const [searchTerm, setSearchTerm] = useState<string>("")
-  const [shouldUpdate, setShouldUpdate] = useState<boolean>(false)
+  const [searchTerm, setSearchTerm] = useState<string>("keyboard")
+  const [one, setOne] = useState<boolean>(true)
+  const [shouldUpdate, setShouldUpdate] = useState<boolean>(true)
   const [found, setFound] = useState<boolean>(true)
   const [validation, setValidation] = useState<boolean>(true)
   const [searchResult, setSearchResult] = useState<any>(null)
@@ -59,6 +60,7 @@ const Search: React.FC<Props> = () => {
   // att page
   useEffect(() => {
     if (shouldUpdate) {
+      setOne(false)
       handleSearch()
       setShouldUpdate(false)
     }
@@ -72,7 +74,7 @@ const Search: React.FC<Props> = () => {
             className={validation ? '' : 'error'}
             type="text"
             placeholder="Search for any word…"
-            value={searchTerm}
+            value={searchTerm || (one ? "keyboard" : null)}
             name="inputSearch"
             onChange={(e) => setSearchTerm(e.target.value)}
             onKeyDown={(e) => {
@@ -85,7 +87,7 @@ const Search: React.FC<Props> = () => {
             }}
           />
           <span className={validation ? '' : 'error'}>Whoops, can’t be empty…</span>
-          <button onClick={searchTerm > 0 ? handleSearch : notValid}>
+          <button onClick={searchTerm.length > 0 ? handleSearch : notValid}>
             <img src={IconSearch} alt="IconSearch" />
           </button>
         </div>
