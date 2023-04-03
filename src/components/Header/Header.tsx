@@ -46,7 +46,7 @@ const Header = () => {
     { value: "Inconsolata", label: "Mono" }
   ]
   const [selectedFont, setSelectedFont] = useState<string>(
-    localStorage.getItem("selectedFont") || fontOptions[0].value
+    localStorage.getItem("selectedFont") || fontOptions[1].value
   )
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
