@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 import './css/header.css'
 
-import Logo from '../../assets/images/Logo.svg'
-import ArrowDown from '../../assets/images/icon-arrow-down.svg'
+import Logo from './../../assets/images/logo.svg'
+import ArrowDown from './../../assets/images/icon-arrow-down.svg'
 
 const Header = () => {
   // toggle theme
