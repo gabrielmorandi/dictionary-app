@@ -14,7 +14,7 @@
 }
 @media screen and (min-width: 850px) {
   #search > div {
-    gap: 45px;
+    gap: 41px;
   }
 }
 #search > div .search {
@@ -101,7 +101,7 @@
 }
 @media screen and (min-width: 850px) {
   #search > div .result .result-header > div {
-    gap: 8px;
+    gap: 5px;
   }
 }
 #search > div .result .result-header > div h2 {
@@ -168,8 +168,8 @@
 }
 @media screen and (min-width: 850px) {
   #search > div .result .result-content .meaning {
-    gap: 40px;
-    margin-block-start: 40px;
+    gap: 38px;
+    margin-block-start: 39px;
   }
 }
 #search > div .result .result-content .meaning h2 {
@@ -212,7 +212,7 @@
 }
 @media screen and (min-width: 850px) {
   #search > div .result .result-content .meaning > div {
-    gap: 25px;
+    gap: 24px;
   }
 }
 #search > div .result .result-content .meaning > div h3 {
@@ -237,6 +237,11 @@
   display: flex;
   flex-direction: column;
   gap: 13px;
+}
+@media screen and (min-width: 500px) {
+  #search > div .result .result-content .meaning > div ul {
+    margin-inline-start: 22px;
+  }
 }
 #search > div .result .result-content .meaning > div ul li {
   display: flex;
@@ -264,7 +269,7 @@
 }
 @media screen and (min-width: 500px) {
   #search > div .result .result-content .meaning > div .synonyms {
-    margin-block-start: 24px;
+    margin-block-start: 15px;
   }
 }
 #search > div .result .result-content .meaning > div .synonyms > div {
